@@ -1,0 +1,120 @@
+/* select a font */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+:root {
+  --clr-sky-blue: #8ecae6ff;
+  --clr-blue-green: #219ebcff;
+  --clr-prussian-blue: #023047ff;
+  --clr-selective-yellow: #ffb703ff;
+  --clr-ut-orange: #fb8500ff;
+  --clr--white: #ffff;
+  --clr--black: #3333;
+  --clr--red: #d90429;
+  --clr--green: #06d6a0;
+  --ff-roboto: 'Roboto', sans-serif;
+  --ff-noto-sans: 'Noto Sans', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --max-width: 1170px;
+  --fixed-width: 450px;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: url(../image/photo-16.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  padding: 1.25rem;
+  width: 25rem;
+  color: var(--clr-ut-orange);
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+  border: 2px solid var(--clr--white);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.form-title {
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.form-control label {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.input {
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.input:focus {
+  border: 2px solid var(--clr-blue-green);
+}
+
+.input.success {
+  border: 2px solid var(--clr--green);
+}
+
+.input.error-input {
+  border: 2px solid var(--clr--red);
+}
+
+.error {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--clr--red);
+  margin-left: 1rem;
+  visibility: hidden;
+}
+.error-message {
+  visibility: visible;
+}
+
+.btn-submit {
+  padding: 0.75rem 1.25rem;
+  border: 2px solid #3333;
+  font-size: 1.25rem;
+  font-weight: 600;
+  background-color: var(--clr-sky-blue);
+  color: var(--clr-ut-orange);
+  transition: all 0.6s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-5px);
+}
